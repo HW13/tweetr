@@ -1,0 +1,46 @@
+/* New-tweet form Stylesheet */
+
+section.new-tweet{
+  border-width:1px;
+  border-color: grey;
+  border-style:solid;
+  border-radius:10px;
+  background-color: #eee;
+}
+
+.new-tweet {
+  padding-left: 15px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.new-tweet:before,
+.new-tweet:after {
+  content: "";
+  display: table;
+}
+
+.new-tweet:after {
+  clear: both;
+}
+
+h2 {
+  border-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: grey;
+
+
+}
+
+textarea {
+  width: 350px;
+  float: left;
+  padding: 5px;
+}
+
+.counter {
+  float: right;
+}
