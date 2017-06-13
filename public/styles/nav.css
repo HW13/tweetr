@@ -1,0 +1,30 @@
+/*Nav-Bar Stylesheet*/
+
+#nav-bar {
+  display: block;
+  background-color: #00a087;
+  height: 80px;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+#nav-bar:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#nav-bar .logo {
+  width: 80px;
+  height: 80px;
+  float: left;
+}
+
+#nav-bar .header {
+  font-size: 200%;
+  color: #e8fdff;
+  padding-left: 10px;
+  padding-top: 20px;
+  float: left;
+
+}
