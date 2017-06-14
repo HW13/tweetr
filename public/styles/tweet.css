@@ -1,8 +1,8 @@
 /* Tweet stylesheet */
 
 
-section {
-  padding-top: 20px;
+#tweets-container {
+
 }
 
 article.tweet {
@@ -12,6 +12,7 @@ article.tweet {
   border-radius:10px;
   width: 400px;
   margin: 0 auto;
+  margin-top: 10px;
 }
 
 article.tweet header {
@@ -27,6 +28,13 @@ article.tweet header {
   float: left;
 }
 
+div.handle {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 60%;
+  float: right;
+}
+
 img.avatar {
   width: 13%;
   height: 13%;
@@ -36,8 +44,8 @@ img.avatar {
 }
 
 article.tweet p {
-  padding-top: 70px;
-  padding-left: 10px;
+  padding-top: 3.5em;
+  padding-left: 1em;
 }
 
 article.tweet footer {
@@ -49,6 +57,7 @@ article.tweet footer {
   float: left;
   padding: 10px;
 }
+
 .tweet:before,
 .tweet:after {
   content: "";
@@ -72,7 +81,7 @@ article.hover {
 
 article.hover header{
   background-color: #00a087;
-  color: black;
+  color: #e8fdff;
   border-color: #00a087;
   border-bottom-color: black;
   border-width: 1px;
