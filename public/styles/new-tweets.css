@@ -1,9 +1,9 @@
 /* New-tweet form Stylesheet */
 
-section.new-tweet{
+section.new-tweet {
   border-width:1px;
   border-color: grey;
-  border-style:solid;
+  border-style: solid;
   border-radius:10px;
   background-color: #eee;
 }
@@ -31,8 +31,6 @@ h2 {
   border-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: grey;
-
-
 }
 
 textarea {
@@ -43,4 +41,10 @@ textarea {
 
 .counter {
   float: right;
+  font-style: italic;
+}
+
+/* Used by composer-char-counter.js when maxChar has been exceeded*/
+.over-max {
+  color: red;
 }
