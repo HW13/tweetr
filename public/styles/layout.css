@@ -28,15 +28,6 @@ body {
   background-color: white;
 }
 
-.container:before,
-.container:after {
-  content: "";
-  display: table;
-}
-
-.container:after {
-  clear: both;
-}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

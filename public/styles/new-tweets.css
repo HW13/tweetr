@@ -1,6 +1,7 @@
 /* New-tweet form Stylesheet */
 
 section.new-tweet {
+  display: none;
   border-width: 1px;
   border-color: grey;
   border-style: solid;
@@ -16,13 +17,9 @@ section.new-tweet {
   margin: 0 auto;
 }
 
-.new-tweet:before,
 .new-tweet:after {
   content: "";
   display: table;
-}
-
-.new-tweet:after {
   clear: both;
 }
 
@@ -38,6 +35,16 @@ section.new-tweet {
   padding: 5px;
 }
 
+.new-tweet input{
+  margin-top: 5px;
+  background-color: #eeeeee;
+  border-color: grey;
+  border-radius: 10px;
+}
+
+.new-tweet input:hover {
+  border-width: 2.5px;
+}
 .counter {
   float: right;
   font-size: 75%;

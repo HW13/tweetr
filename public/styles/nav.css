@@ -28,3 +28,27 @@
   float: left;
 
 }
+
+#nav-bar button {
+  float: right;
+  margin-top: 8px;
+  margin-right: 50px;
+  height: 65px;
+  width: 150px;
+  background-color: #e8fdff;
+  color:  #244751;
+  border-color: #244751;
+  border-radius: 25px;
+  font-size: 15pt;
+}
+
+#nav-bar button:active {
+  background-color: #eeeeee;
+  color: #244751;
+  border-color: grey;
+}
+
+#nav-bar button:hover {
+  transform: scale(1.08);
+  border-width: 3px;
+}
