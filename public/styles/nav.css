@@ -6,6 +6,9 @@
   height: 80px;
   padding-left: 2em;
   padding-right: 2em;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
 }
 
 #nav-bar:after {
