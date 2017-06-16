@@ -39,8 +39,8 @@ img.avatar {
 }
 
 article.tweet p {
-  padding-left: 10px;
-  float: left;
+  padding: 4em 0.5em 0em 0.5em;
+  word-wrap: break-word;
 
 }
 
@@ -94,4 +94,8 @@ article:hover i {
   padding: 2px;
   float: right;
   visibility: visible;
+}
+
+@media(max-width: 450px){
+  article.tweet {width: 75%}
 }

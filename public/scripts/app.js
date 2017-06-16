@@ -18,7 +18,7 @@ $(function () {
             </header>
             <p>${escape(object.content.text)}</p>
             <footer>
-              ${escape(object.created_at)}
+              ${escape(moment(object.created_at).fromNow())}
               <i class="flag-button fa fa-flag-o fa-lg" aria-hidden="true"></i>
               <i class="fa fa-retweet fa-lg" aria-hidden="true"></i>
               <i class="thumb-button fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i>
@@ -69,6 +69,7 @@ $(function () {
       loadTweets();
       $(".new-tweet textarea").val("");
       $(".new-tweet textarea").focus();
+      $("section.new-tweet").slideToggle("slow");
     });
   });
 });

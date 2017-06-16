@@ -4,8 +4,7 @@
   display: block;
   background-color: #00a087;
   height: 80px;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding: 0em 2em 0em 2em;
   position: fixed;
   width: 100%;
   z-index: 9999;
@@ -26,16 +25,15 @@
 #nav-bar .header {
   font-size: 200%;
   color: #e8fdff;
-  padding-left: 10px;
-  padding-top: 20px;
+  padding: 20px 0px 0px 10px;
+
   float: left;
 
 }
 
 #nav-bar button {
+  margin-top: 5px;
   float: right;
-  margin-top: 8px;
-  margin-right: 50px;
   height: 65px;
   width: 150px;
   background-color: #e8fdff;
@@ -44,6 +42,7 @@
   border-radius: 25px;
   font-size: 15pt;
 }
+
 
 #nav-bar button:active {
   background-color: #eeeeee;
@@ -54,4 +53,8 @@
 #nav-bar button:hover {
   transform: scale(1.08);
   border-width: 3px;
+}
+
+@media(max-width: 450px){
+  #nav-bar button {width: 35%}
 }
