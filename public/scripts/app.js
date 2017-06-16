@@ -35,7 +35,7 @@ $(function () {
     $('#tweets-container').empty();
     tweets.forEach(function (tweet) {
       $('#tweets-container').prepend(createTweetElement(tweet));
-    })
+    });
   }
 
   // GETs tweets then uses renderTweets to populate the HTML
@@ -46,14 +46,14 @@ $(function () {
     }).done(renderTweets);
   }
 
-loadTweets();
+  loadTweets();
 
   // POSTs new tweet to database on form submission.
   // Then without refreshing, the page is updated.
   $('section.new-tweet form').on('submit', function (event) {
     event.preventDefault();
     var tweet = $(this).find('[name=text]').val();
-    if (tweet == "") {
+    if (tweet === "") {
       alert("Tweets cannot be empty");
       return false;
     }
@@ -65,7 +65,11 @@ loadTweets();
       method: 'POST',
       url: '/tweets',
       data: $(this).serialize()
-    }).done(loadTweets);
+    }).done(function () {
+      loadTweets();
+      $(".new-tweet textarea").val("");
+      $(".new-tweet textarea").focus();
+    });
   });
-})
+});
 

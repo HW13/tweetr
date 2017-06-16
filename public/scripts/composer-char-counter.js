@@ -3,7 +3,7 @@
 
 $(function () {
   var maxChar = 140;
-  $(".new-tweet").on("input", "textarea", function () { //need to find better "input"
+  $(".new-tweet").on("input focus", "textarea", function () {
     var currentChar = $(this).val().length;
     var remainingChar = maxChar - currentChar;
     var $location = $(".new-tweet .counter");

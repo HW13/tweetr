@@ -8,5 +8,5 @@ $(function(){
     } else if($target.hasClass('thumb-button')) {
       $target.toggleClass('fa-thumbs-up').toggleClass('fa-thumbs-o-up');
     }
-  })
+  });
 });
