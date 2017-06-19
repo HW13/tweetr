@@ -9,6 +9,8 @@ $(function () {
   //Takes in a Tweet Object.
   //Returns <article> containing entire HTML structure of the tweet.
   function createTweetElement(object) {
+    var liked = escape(object.content.like) === "true" ? "fa-thumbs-up" : "fa-thumbs-o-up";
+    var flagged = escape(object.content.flag) === "true" ? "fa-flag" : "fa-flag-o";
     var $tweet =
            $(`<article class="tweet">
             <header>
@@ -19,12 +21,11 @@ $(function () {
             <p>${escape(object.content.text)}</p>
             <footer>
               ${escape(moment(object.created_at).fromNow())}
-              <i class="flag-button fa fa-flag-o fa-lg" aria-hidden="true"></i>
+              <i class="flag-button fa ${flagged} fa-lg" aria-hidden="true" data-tweet-id="${escape(object.user.name)}"></i>
               <i class="fa fa-retweet fa-lg" aria-hidden="true"></i>
-              <i class="thumb-button fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i>
+              <i class="thumb-button fa ${liked} fa-lg" aria-hidden="true" data-tweet-id="${escape(object.user.name)}"></i>
             </footer>
           </article>`);
-
     return $tweet;
   }
 
@@ -62,7 +63,7 @@ $(function () {
       return false;
     }
     $.ajax({
-      method: 'POST',
+      method: 'post',
       url: '/tweets',
       data: $(this).serialize()
     }).done(function () {

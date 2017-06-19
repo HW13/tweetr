@@ -27,7 +27,9 @@ module.exports = function(DataHelpers) {
     const tweet = {
       user: user,
       content: {
-        text: req.body.text
+        text: req.body.text,
+        like: false,
+        flag: false
       },
       created_at: Date.now()
     };
@@ -39,6 +41,42 @@ module.exports = function(DataHelpers) {
         res.status(201).send();
       }
     });
+  });
+
+  tweetsRoutes.post("/:id/flag", function(req, res) {
+    const postFlag = {
+      user: req.params.id,
+      content: {
+        flag: req.body.tweetFlag
+      }
+    };
+
+    DataHelpers.flagTweet(postFlag, (err) => {
+      if (err) {
+        res.status(500).json({ error: err.message });
+      } else {
+        res.status(201).send();
+      }
+    });
+
+  });
+
+  tweetsRoutes.post("/:id/like", function(req, res) {
+    const postLike = {
+      user: req.params.id,
+      content: {
+        like: req.body.tweetLike
+      }
+    };
+
+    DataHelpers.likeTweet(postLike, (err) => {
+      if (err) {
+        res.status(500).json({ error: err.message });
+      } else {
+        res.status(201).send();
+      }
+    });
+
   });
 
   return tweetsRoutes;
