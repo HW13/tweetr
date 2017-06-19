@@ -11,6 +11,7 @@ $(function () {
   function createTweetElement(object) {
     var liked = escape(object.content.like) === "true" ? "fa-thumbs-up" : "fa-thumbs-o-up";
     var flagged = escape(object.content.flag) === "true" ? "fa-flag" : "fa-flag-o";
+    var flagP = escape(object.content.flag) === "false" ? "no-flag" : "hide-flagged";
     var $tweet =
            $(`<article class="tweet">
             <header>
@@ -18,7 +19,7 @@ $(function () {
               ${escape(object.user.name)}
               <div class="handle">${escape(object.user.handle)}</div>
             </header>
-            <p>${escape(object.content.text)}</p>
+            <p class=${flagP}>${escape(object.content.text)}</p>
             <footer>
               ${escape(moment(object.created_at).fromNow())}
               <i class="flag-button fa ${flagged} fa-lg" aria-hidden="true" data-tweet-id="${escape(object.user.name)}"></i>

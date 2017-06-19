@@ -12,7 +12,9 @@ $(function(){
         method: 'post',
         url: `/tweets/${$target.data("tweetId")}/flag`,
         data: $target.data()
-      });
+      }).done( function () {
+        $target.closest(".tweet").find("p").slideToggle();
+      })
 
     } else if($target.hasClass('thumb-button')) {
       $target.toggleClass('fa-thumbs-up').toggleClass('fa-thumbs-o-up');
