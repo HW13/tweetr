@@ -1,4 +1,5 @@
-// Listens for clicks on
+// Listens for clicks on like and flag icons
+// Through the use of data attributes -> posts if a tweet is liked/unliked or flagged/unflagged
 
 $(function(){
   $('#tweets-container').on('click', function(event){
